@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import './App.css';
 import {connect} from 'react-redux'
+import { thisTypeAnnotation } from '@babel/types';
 
 class Home extends Component {
   componentDidMount () {
@@ -15,8 +16,13 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
-      {JSON.stringify(this.props, null, 2)}
+      {/* {JSON.stringify(this.props, null, 2)} */}
         <p>Home</p>
+        <ul>
+            {this.props.reduxState.movies.map(movie =>
+                <li key={movie.id}>{movie.title}</li>
+                )}
+        </ul>
       </div>
     );
   }
