@@ -33,7 +33,7 @@ function* fetchMovies (action) {
 
 function* fetchGenres (action) {
     try {
-        const genreResponse = yield axios.get('/fruit');
+        const genreResponse = yield axios.get('/genres');
         yield put({type: 'SET_TAGS', payload: genreResponse.data})
     } catch(error){
         console.log('error fetching genres', error);
