@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import { thisTypeAnnotation } from '@babel/types';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import OneMovie from '../OneMovie/OneMovie'
 
 class Home extends Component {
   componentDidMount () {
@@ -26,7 +28,7 @@ class Home extends Component {
       <div className="App">
       {/* {JSON.stringify(this.props, null, 2)} */}
         <p>Home</p>
-        <ul onclick={this.getDetails} >
+        {/* <ul onclick={this.getDetails} >
             
             {this.props.reduxState.movies.map(movie =>
             
@@ -37,7 +39,14 @@ class Home extends Component {
                         </Button></li>
                 )}
             
-        </ul>
+        </ul> */}
+
+        
+        {this.props.reduxState.movies.map(movie => 
+        <OneMovie movie={movie}
+        history={this.props.history}
+        key={movie.id}/>
+        )}
       </div>
     );
   }

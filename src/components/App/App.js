@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import Home from '../Home/Home.js'
 import Details from '../Details/Details.js'
 import Edit from '../Edit/Edit.js'
+
 class App extends Component {
   // componentDidMount () {
   //   this.props.dispatch({

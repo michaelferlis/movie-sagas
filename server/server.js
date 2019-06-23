@@ -36,6 +36,8 @@ app.get('/genres', (req, res) => {
     
 })
 
+
+
 /** ---------- START SERVER ---------- **/
 app.listen(port, function () {
     console.log('Listening on port: ', port);
