@@ -2,16 +2,22 @@ import React, { Component } from 'react';
 // import './App.css';
 import { connect } from 'react-redux'
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
 class Details extends Component {
   componentDidMount() {
   }
+  handleClick = () =>{
+    this.props.history.push(`/edit`)
+  }
   // Renders the entire app on the DOM
   render() {
     return (
+      <div>
       <Button size="small" onClick={this.handleClick}>
         Edit
                         </Button>
+                       
       <Grid container justify="center">
         <Grid item xs={5}>
           <img
@@ -24,6 +30,7 @@ class Details extends Component {
           <p>{this.props.movie.description}</p>
         </Grid>
       </Grid>
+      </div>
     );
   }
 }
