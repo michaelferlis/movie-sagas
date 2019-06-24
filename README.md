@@ -1,5 +1,7 @@
 # React-Redux with Sagas
 
+This project uses react, redux and sagas to display a list of movies on a home page. Using redux, this application also gives you the ability to select a single movie and edit the title/description on a separate edit page. The information is stored using multipule tables in a SQL database. In addition, the database can be accessed using Redux Sagas.
+
 > **PLEASE COMMENT YOUR CODE.** Do not clone this repository. Instead, download the zip, extract the contents, `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
 
 For this weekend challenge you'll be building a movie application!  
