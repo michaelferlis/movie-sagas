@@ -43,6 +43,7 @@ function* fetchGenres (action) {
 
 function* getDetails (action) {
     try {
+        yield put({ type: 'SELECT_MOVIE', payload: action.payload})
         const genreResponse = yield axios.get(`/details${action.payload.id}`);
         yield put({type: 'SET_TAGS', payload: genreResponse.data})
     } catch(error){
@@ -74,11 +75,23 @@ const genres = (state = [], action) => {
     }
 }
 
+const selectMovie = (state = {}, action) =>{
+    
+    
+    if (action.type === 'SELECT_MOVIE'){
+        console.log(action.payload);
+        return action.payload
+    }
+    return state
+}
+
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        selectMovie,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),

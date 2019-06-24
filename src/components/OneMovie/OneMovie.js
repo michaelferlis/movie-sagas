@@ -10,11 +10,9 @@ class OneMovie extends Component {
      
     }
   
-    getDetails=(action)=> {
-      this.props.dispatch({type: 'GET_DETAIL_PAGE',payload: this.props.movie})
+    getDetails=()=> {
+      this.props.dispatch({type: 'GET_DETAILS_PAGE',payload: this.props.movie})
       this.props.history.push(`/details`)
-      console.log('testing');
-      
     }
     // Renders the entire app on the DOM
     render() {
