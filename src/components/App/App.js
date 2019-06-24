@@ -7,14 +7,7 @@ import Details from '../Details/Details.js'
 import Edit from '../Edit/Edit.js'
 
 class App extends Component {
-  // componentDidMount () {
-  //   this.props.dispatch({
-  //     type: 'FETCH_MOVIES'
-  //   })
-  //   this.props.dispatch({
-  //     type: 'FETCH_GENRES'
-  //   })
-  // }
+ 
   // Renders the entire app on the DOM
   render() {
     return (
